@@ -27,10 +27,10 @@
 ### Coupons
 
 - #### `GET /couponsUtilisateurs`: Liste des coupons de l'utilisateur
-  Paramètres : id (utilisateur)
+  Paramètres : aucun
 
 - #### `GET /checkCoupon`: Vérifie si le coupon existe, si oui, l'ajoute à la liste de l'utilisateur
-  Paramètres : id (utilisateur), qrCode
+  Paramètres : qrCode
 
 - #### `GET /coupon`: Détails d'un coupon
   Paramètres : id (coupon)
