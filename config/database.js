@@ -1,10 +1,14 @@
 // config/database.js
 module.exports = {
-    'connection': {
-        'host': 'localhost',
-        'user': 'root',
-        'password': ''
-    },
-	'database': 'gostyle',
-    'users_table': 'utilisateur'
+    HOST: 'localhost',
+    USER: 'root',
+    PASSWORD: '',
+	DB: 'gostyle',
+    DIALECT: 'mysql',
+    POOL: {
+        MAX: 5,
+        MIN: 0,
+        ACQUIRE: 30000,
+        IDLE: 10000
+    }
 };

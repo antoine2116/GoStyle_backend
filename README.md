@@ -1,22 +1,36 @@
-# Complete Guide to Node Authentication with MySQL
+# API GoStyle (Node JS)
 
+## Instructions d'installation
 
+1. Installation des packages: `npm install`
+1. Crée la base de données nommée :  `gostyle`
+1. Modifier la configuration de connexion à la base de données dans : `app/config/database.js`
+1. Lancer le serveur: `node server.js`
+1. API accessible à l'adresse : `http://localhost:8080`
 
-Code for the entire scotch.io tutorial series: Complete Guide to Node Authentication with MongoDB
+## Endpoints
 
-Current version database is ported to MySQL
+### Authentifcation
 
-We will be using Passport to authenticate users locally, 
+- #### `POST /signup`: Création d'un utilisateur
+    Paramètres : username, password
 
-## Instructions
+- #### `POST /login`: Connexion
+    Paramètres : username, password
 
-If you would like to download the code and try it for yourself:
+- #### `GET /logout`: Déconnexion
+    Paramètres : aucun 
 
-1. Install packages: `npm install`
-1. Edit the database configuration: `config/database.js`
-1. Create the database schema: `node scripts/create_database.js`
-1. Launch: `node server.js`
-1. Visit in your browser at: `http://localhost:8080`
+- #### `GET /profile`: Obtenir l'utilisateur connecté
+    Paramètres : aucun
 
+### Coupons
 
-Licence: 1
+- #### `GET /couponsUtilisateurs`: Liste des coupons de l'utilisateur
+  Paramètres : id (utilisateur)
+
+- #### `GET /checkCoupon`: Vérifie si le coupon existe, si oui, l'ajoute à la liste de l'utilisateur
+  Paramètres : id (utilisateur), qrCode
+
+- #### `GET /coupon`: Détails d'un coupon
+  Paramètres : id (coupon)
